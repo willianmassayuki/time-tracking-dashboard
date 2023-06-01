@@ -5,76 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
 
-  Report for
-  Jeremy Robson
+    <div class="principal">
+      <div class="principal__frente">
+        <img src="images\image-jeremy.png" alt="Foto do usuário">
+        <p>Report for</p>
+        <h1>Jeremy Robson</h1>
+      </div>
+      <div class="principal__fundo">
+        <nav>
+            <button id="botaoDiario">Daily</button>
+            <button id="botaoSemanal">Weekly</button>
+            <button id="botaoMensal">Monthly</button>
+          </ul>
+        </nav>
+      </div>
+    </div>
 
-  Daily
-  Weekly
-  Monthly
+    <div class="work">
+      <div class="work__fundo">
+        <img src="images\icon-work.svg" alt="Work icon">
+      </div>
+      <div class="work__frente atividade">
+        <h3>Work</h3>
+        
+      </div>
+    </div>
+    
+    <div class="play">
+      <div class="play__fundo">
+        <img src="images\icon-play.svg" alt="Play icon">
+      </div>
+      <div class="play__frente">
+        <h3>Play</h3>
+      </div>
+    </div>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+    <div class="study">
+      <div class="study__fundo">
+        <img src="images\icon-study.svg" alt="Study icon">
+      </div>
+      <div class="study__frente">
+        <h3>Study</h3>
+      </div>
+    </div>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+    <div class="exercise">
+      <div class="exercise__fundo">
+        <img src="images\icon-exercise.svg" alt="Exercise icon">
+      </div>
+      <div class="exercise__frente">
+        <h3>Exercise</h3>
+      </div>
+    </div>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+    <div class="social">
+      <div class="social__fundo">
+        <img src="images\icon-social.svg" alt="Social icon">
+      </div>
+      <div class="social__frente">
+        <h3>Social</h3>
+      </div>
+    </div>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+    <div class="self">
+      <div class="self__fundo">
+        <img src="images\icon-self-care.svg" alt="Self care icon">
+      </div>
+      <div class="self__frente">
+        <h3>Self Care</h3>
+      </div>
+    </div>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
+  </main> 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Willian Sato</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

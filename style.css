@@ -1,0 +1,31 @@
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&family=Rubik:wght@300;400;500&display=swap');
+
+    body {
+        font-size: 18px;
+        /*background-color: hsl(226, 43%, 10%);*/
+    }
+
+    .diario {
+        display: none;
+    }
+
+    .diari-ativo {
+        display: block;
+    }
+
+    .semanal {
+        display: none;
+    }
+    .semanal-ativo {
+        display: block;
+    }
+
+    .mensal {
+        display: none;
+    }
+    .mensal-ativo {
+        display: block;
+    }
