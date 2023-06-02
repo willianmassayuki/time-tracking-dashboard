@@ -8,24 +8,8 @@
         /*background-color: hsl(226, 43%, 10%);*/
     }
 
-    .diario {
+    .inativo {
         display: none;
     }
 
-    .diari-ativo {
-        display: block;
-    }
-
-    .semanal {
-        display: none;
-    }
-    .semanal-ativo {
-        display: block;
-    }
-
-    .mensal {
-        display: none;
-    }
-    .mensal-ativo {
-        display: block;
-    }
+   
