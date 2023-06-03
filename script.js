@@ -49,34 +49,34 @@ const semanal = document.querySelectorAll('.semanal');
 const mensal = document.querySelectorAll('.mensal');
 
 botaoDiario.addEventListener('click', () => {
-  botaoDiario.style.color = "red";
-  botaoSemanal.style.color = "black";
-  botaoMensal.style.color = "black";
-  for(i = contador; i > 0 ; i = i - 1){
-    diario[contador].classList.remove('inativo');
-    semanal[contador].classList.add('inativo');
-    mensal[contador].classList.add('inativo');
+  botaoDiario.style.color = "#fff";
+  botaoSemanal.style.color = "hsl(235, 45%, 61%)";
+  botaoMensal.style.color = "hsl(235, 45%, 61%)";
+  for(i = contador; i >= 0 ; i -= 1){
+    diario[i].classList.remove('inativo');
+    semanal[i].classList.add('inativo');
+    mensal[i].classList.add('inativo');
   }
 })
 
 botaoSemanal.addEventListener('click', () => {
-  botaoDiario.style.color = "black";
-  botaoSemanal.style.color = "red";
-  botaoMensal.style.color = "black";
-  for(i = contador; i > 0 ; i = i - 1){
-    diario[contador].classList.add('inativo');
-    semanal[contador].classList.remove('inativo');
-    mensal[contador].classList.add('inativo');
+  botaoDiario.style.color = "hsl(235, 45%, 61%)";
+  botaoSemanal.style.color = "#fff";
+  botaoMensal.style.color = "hsl(235, 45%, 61%)";
+  for(i = contador; i >= 0 ; i -= 1){
+    diario[i].classList.add('inativo');
+    semanal[i].classList.remove('inativo');
+    mensal[i].classList.add('inativo');
   }
 })
 
 botaoMensal.addEventListener('click', () => {
-  botaoDiario.style.color = "black";
-  botaoSemanal.style.color = "black";
-  botaoMensal.style.color = "red";
-  for(i = contador; i > 0 ; i = i - 1){
-    diario[contador].classList.add('inativo');
-    semanal[contador].classList.add('inativo');
-    mensal[contador].classList.remove('inativo');
+  botaoDiario.style.color = "hsl(235, 45%, 61%)";
+  botaoSemanal.style.color = "hsl(235, 45%, 61%)";
+  botaoMensal.style.color = "#fff";
+  for(i = contador; i >= 0 ; i -= 1){
+    diario[i].classList.add('inativo');
+    semanal[i].classList.add('inativo');
+    mensal[i].classList.remove('inativo');
   }
 })
