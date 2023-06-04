@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Time tracking dashboard</title>
@@ -20,81 +21,88 @@
         <h1>Jeremy Robson</h1>
       </div>
       <div class="principal__fundo">
-        <nav>
-            <button id="botaoDiario">Daily</button>
-            <button id="botaoSemanal">Weekly</button>
-            <button id="botaoMensal">Monthly</button>
-          </ul>
-        </nav>
+        
+          <nav class="menu">
+              <button id="botaoDiario">Daily</button>
+              <button id="botaoSemanal">Weekly</button>
+              <button id="botaoMensal">Monthly</button>
+          </nav>
+        
       </div>
     </div>
 
-    <div class="work">
-      <div class="work__fundo">
+    <div class="work caixa__atividades">
+      <div class="work__fundo caixa__atividades--fundo">
         <img src="images\icon-work.svg" alt="Work icon">
       </div>
-      <div class="work__frente atividade">
+      <div class="work__frente caixa__atividades--frente">
         <h3>Work</h3>
+        <a class="opcoes" href="#">...</a>
         <div class="work__frente diario"></div>
         <div class="work__frente semanal inativo"></div>
         <div class="work__frente mensal inativo"></div>
       </div>
     </div>
     
-    <div class="play">
-      <div class="play__fundo">
+    <div class="play caixa__atividades">
+      <div class="play__fundo caixa__atividades--fundo">
         <img src="images\icon-play.svg" alt="Play icon">
       </div>
-      <div class="play__frente">
+      <div class="play__frente caixa__atividades--frente">
         <h3>Play</h3>
+        <a class="opcoes" href="#">...</a>
         <div class="play__frente diario"></div>
         <div class="play__frente semanal inativo"></div>
         <div class="play__frente mensal inativo"></div>
       </div>
     </div>
 
-    <div class="study">
-      <div class="study__fundo">
+    <div class="study caixa__atividades">
+      <div class="study__fundo caixa__atividades--fundo">
         <img src="images\icon-study.svg" alt="Study icon">
       </div>
-      <div class="study__frente">
+      <div class="study__frente caixa__atividades--frente">
         <h3>Study</h3>
+        <a class="opcoes" href="#">...</a>
         <div class="study__frente diario"></div>
         <div class="study__frente semanal inativo"></div>
         <div class="study__frente mensal inativo"></div>
       </div>
     </div>
 
-    <div class="exercise">
-      <div class="exercise__fundo">
+    <div class="exercise caixa__atividades">
+      <div class="exercise__fundo caixa__atividades--fundo">
         <img src="images\icon-exercise.svg" alt="Exercise icon">
       </div>
-      <div class="exercise__frente">
+      <div class="exercise__frente caixa__atividades--frente">
         <h3>Exercise</h3>
+        <a class="opcoes" href="#">...</a>
         <div class="exercise__frente diario"></div>
         <div class="exercise__frente semanal inativo"></div>
         <div class="exercise__frente mensal inativo"></div>
       </div>
     </div>
 
-    <div class="social">
-      <div class="social__fundo">
+    <div class="social caixa__atividades">
+      <div class="social__fundo caixa__atividades--fundo">
         <img src="images\icon-social.svg" alt="Social icon">
       </div>
-      <div class="social__frente">
+      <div class="social__frente caixa__atividades--frente">
         <h3>Social</h3>
+        <a class="opcoes" href="#">...</a>
         <div class="social__frente diario"></div>
         <div class="social__frente semanal inativo"></div>
         <div class="social__frente mensal inativo"></div>
       </div>
     </div>
 
-    <div class="self">
-      <div class="self__fundo">
+    <div class="self caixa__atividades">
+      <div class="self__fundo caixa__atividades--fundo">
         <img src="images\icon-self-care.svg" alt="Self care icon">
       </div>
-      <div class="self__frente">
+      <div class="self__frente caixa__atividades--frente">
         <h3>Self Care</h3>
+        <a class="opcoes" href="#">...</a>
         <div class="self__frente diario"></div>
         <div class="self__frente semanal inativo"></div>
         <div class="self__frente mensal inativo"></div>

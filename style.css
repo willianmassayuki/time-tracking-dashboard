@@ -3,40 +3,50 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&family=Rubik:wght@300;400;500&display=swap');
 
+    :root {
+        --largura-padrao: 360px;
+    }
+
     body {
         font-size: 18px;
         font-family: 'Rubik', sans-serif;
-        /*background-color: hsl(226, 43%, 10%);*/
+        color: hsl(236, 100%, 87%);
+        background-color: hsl(226, 43%, 10%);*/
     }
 
-    .inativo {
-        display: none;
+    h1 {
+        font-size: 24px;
+        color: #fff;
+    }  
+
+    h2 {
+        font-size: 28px;
+        color: #fff;
     }
 
-    nav {
-        position: absolute;
-        margin: auto auto 0 auto;
-        bottom: 30px;
+    h3 {
+        font-size: 18px;
+        color: #fff;
     }
 
    nav button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-weight: bold;
+    font-size: 18px;
     color: hsl(235, 45%, 61%);
+    padding-top: 20px;
    }
 
-   #botaoDiario:hover {
-    color: #fff;
-   }
+   
 
    .principal {
     display: grid;
     position: relative;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 70px);
-    
+    margin: 100px auto 0 auto;
+    width: var(--largura-padrao);
    }
 
    .principal__frente {
@@ -47,6 +57,9 @@
     height: 100%;
     width: 100%;
     z-index: 1;
+    display: grid;
+    grid-template-rows: repeat(4, 35px);
+    grid-template-columns: 1fr 2fr;
    }
 
    .principal__fundo {
@@ -57,12 +70,144 @@
     grid-row: 2 / span 2;
     height: 100%;
     width: 100%;
+    display: grid;
+    grid-row: 1fr 1fr;
+    grid-column: 1fr;
    }
+
+   .menu {
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    }
 
    .foto__perfil {
     position: relative;
-    height: 25%;
+    height: 70px;
     border-style: solid;
-    border-radius: 30px;
+    border-radius: 50%;
     border: 4px solid white;
+    grid-row: 2 / span 2;
+    margin: 0 auto;
+   }
+
+   .principal__frente h1 {
+    grid-row: 3;
+    grid-column: 2;
+    margin: 0 20px 0 0;
+    white-space: nowrap;
+   }
+
+   .principal__frente p{
+    grid-row: 2;
+    grid-column: 2;
+    margin: auto auto 5px 0;
+   }
+
+   .caixa__atividades {
+    position: relative;
+    margin: 20px auto;
+    width: var(--largura-padrao);
+    height: 160px;
+    display: grid;
+    grid-template-rows: repeat(4, 40px);
+   }
+
+   .caixa__atividades--fundo{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-row: 1 / span 2;
+    border-radius: 20px;
+    overflow: hidden;
+   }
+
+   .caixa__atividades--fundo img {
+    position: absolute;
+    right: 20px;
+    top: -10px;
+   }
+
+   .work__fundo {
+    background-color: hsl(15, 100%, 70%);
+   }
+
+   .play__fundo {
+    background-color: hsl(195, 74%, 62%);
+   }
+
+   .study__fundo {
+    background-color: hsl(348, 100%, 68%);
+   }
+
+   .exercise__fundo {
+    background-color: hsl(145, 58%, 55%);
+   }
+
+   .social__fundo {
+    background-color: hsl(264, 64%, 52%);
+   }
+
+   .self__fundo {
+    background-color: hsl(43, 84%, 65%);
+   }
+
+   .caixa__atividades--frente {
+    background-color: hsl(235, 46%, 20%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    grid-row: 2 / span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 60px);
+   }
+
+   .caixa__atividades h3 {
+    margin: auto auto 5px 24px;
+   }
+
+   .caixa__atividades a {
+    text-decoration: none;
+    color: hsl(236, 100%, 87%);
+    font-size: 2rem;
+    margin: auto 24px 5px auto;
+    grid-row: 1;
+    grid-column: 2;
+   }
+
+   .diario {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 12px;
+   }
+
+   .semanal {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 12px;
+   }
+
+   .mensal {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 12px;
+   }
+
+   .inativo {
+    display: none;
+}
+
+.menu button:hover {
+    color: #fff;
    }
