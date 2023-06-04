@@ -1,17 +1,14 @@
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-
     @import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&family=Rubik:wght@300;400;500&display=swap');
 
     :root {
-        --largura-padrao: 360px;
+        --largura-padrao: 320px;
     }
 
     body {
         font-size: 18px;
         font-family: 'Rubik', sans-serif;
         color: hsl(236, 100%, 87%);
-        background-color: hsl(226, 43%, 10%);*/
+        background-color: hsl(226, 43%, 10%);
     }
 
     h1 {
@@ -37,8 +34,6 @@
     color: hsl(235, 45%, 61%);
     padding-top: 20px;
    }
-
-   
 
    .principal {
     display: grid;
@@ -180,34 +175,168 @@
     grid-column: 2;
    }
 
-   .diario {
+   .diario, .semanal, .mensal {
     grid-row: 2;
     grid-column: 1 / span 2;
     display: flex;
     justify-content: space-between;
     margin: 5px 12px;
-   }
-
-   .semanal {
-    grid-row: 2;
-    grid-column: 1 / span 2;
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 12px;
-   }
-
-   .mensal {
-    grid-row: 2;
-    grid-column: 1 / span 2;
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 12px;
+    white-space: nowrap;
    }
 
    .inativo {
     display: none;
 }
 
-.menu button:hover {
-    color: #fff;
+footer {
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none; 
+}
+
+
+   /* Estilo para a versão Desktop*/
+
+@media screen and (min-width: 1200px){ 
+    h1 {
+        font-size: 42px;
+        color: #fff;
+    }  
+
+    h2 {
+        font-size: 52px;
+        color: #fff;
+    }
+
+    .conteiner-externo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .conteiner {
+        display: grid;
+        grid-template-columns: repeat(4, var(--largura-padrao));
+        grid-template-rows: repeat(2, var(--largura-padrao));
+        gap: 30px;
+    }
+
+    .principal {
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        margin: auto;
+        width: var(--largura-padrao);
+        height: 100%;
+        grid-row: 1 / span 2;
+    }
+
+    .menu {
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: auto auto 30px 30px;
+    }
+
+    nav button {
+        padding-top: 38px;
+    }
+    
+    .caixa__atividades {
+        position: relative;
+        margin: auto;
+        width: var(--largura-padrao);
+        display: grid;
+        grid-template-rows: 50px repeat(3, 1fr);
+        height: 100%;
+    }
+   
+
+   .caixa__atividades--frente {
+        background-color: hsl(235, 46%, 20%);
+        position: absolute;
+        grid-row: 2 / span 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px repeat(2, 1fr);
    }
+
+   .caixa__atividades h3 {
+        margin: auto 30px;
+   }
+
+   .caixa__atividades a {
+        margin: auto 30px auto auto;
+        padding-bottom: 15px;
+        grid-row: 1;
+        grid-column: 2;
+   }
+
+   .diario, .semanal, .mensal {
+        grid-row: 2 / span 2;
+        grid-column: 1 / span 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0 15px 24px 15px;
+    }
+
+   .inativo {
+        display: none;
+    }
+
+    .principal__frente {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+       }
+
+    .foto__perfil {
+        position: relative;
+        height: 90px;
+        border-style: solid;
+        border-radius: 50%;
+        border: 4px solid white;
+        grid-row: 1 / span 2;
+        grid-column: 1;
+        margin: 30px auto auto 30px;
+    }
+
+    .principal__frente h1 {
+        grid-row: 3;
+        grid-column: 1;
+        margin: 0 auto auto 30px;
+        white-space: wrap;
+    }
+    
+    .principal__frente p{
+        grid-row: 2;
+        grid-column: 1;
+        margin: auto auto 5px 30px;
+    }
+
+    footer {
+        display: none;
+    }
+
+    button:hover {
+        color: #fff;
+    }
+
+    .caixa__atividades--frente:hover {
+        background-color: hsl(235, 45%, 35%);
+        cursor: pointer;
+    }
+}

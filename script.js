@@ -13,16 +13,24 @@ function mostraTempos(classe, indice){
         //  indices.map((indice) =>        
         //      classindice.innerHTML += `<li>${indice.title} - ${indice.timeframes.daily.current}hrs Last week - ${indice.timeframes.daily.current} hrs</li>`
         //  })
+        var dc = indices[indice].timeframes.daily.current;
+        var dp = indices[indice].timeframes.daily.previous;
+        var wc = indices[indice].timeframes.weekly.current;
+        var wp = indices[indice].timeframes.weekly.previous;
+        var mc = indices[indice].timeframes.monthly.current;
+        var mp = indices[indice].timeframes.monthly.previous;
+
+        console.log(dc);
         for (i=1; i <= 3; i++){
           if (i == 1){
-            classe[i].innerHTML += `<h2 class="diario">${indices[indice].timeframes.daily.current}hrs</h2>` + 
-              `<p class="diario">Yesterday - ${indices[indice].timeframes.daily.previous}hrs</p>`;
+            classe[i].innerHTML += `<h2 class="diario">${dc}hrs</h2>` + 
+              `<p class="diario">Yesterday - ${dp}hrs</p>`;
           }else if(i == 2){
-              classe[i].innerHTML += `<h2 class="semanal">${indices[indice].timeframes.weekly.current}hrs</h2>` + 
-              `<p class="semanal">Last week - ${indices[indice].timeframes.weekly.previous}hrs</p>`;
+              classe[i].innerHTML += `<h2 class="semanal">${wc}hrs</h2>` + 
+              `<p class="semanal">Last week - ${wp}hrs</p>`;
           }else{
-              classe[i].innerHTML += `<h2 class="mensal">${indices[indice].timeframes.monthly.current}hrs</h2>` + 
-              `<p class="mensal">Last Month - ${indices[indice].timeframes.monthly.previous}hrs</p>`;
+              classe[i].innerHTML += `<h2 class="mensal">${mc}hrs</h2>` + 
+              `<p class="mensal">Last Month - ${mp}hrs</p>`;
           }
         }
         contador++;
