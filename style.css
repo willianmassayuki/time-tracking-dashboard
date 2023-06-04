@@ -300,7 +300,7 @@ footer {
     .principal__frente {
         display: grid;
         grid-template-rows: repeat(4, 1fr);
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr 1fr;
        }
 
     .foto__perfil {

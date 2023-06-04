@@ -10,17 +10,12 @@ var contador = -1;
 function mostraTempos(classe, indice){
   fetch("data.json").then((response) =>{
       response.json().then((indices) => {
-        //  indices.map((indice) =>        
-        //      classindice.innerHTML += `<li>${indice.title} - ${indice.timeframes.daily.current}hrs Last week - ${indice.timeframes.daily.current} hrs</li>`
-        //  })
         var dc = indices[indice].timeframes.daily.current;
         var dp = indices[indice].timeframes.daily.previous;
         var wc = indices[indice].timeframes.weekly.current;
         var wp = indices[indice].timeframes.weekly.previous;
         var mc = indices[indice].timeframes.monthly.current;
         var mp = indices[indice].timeframes.monthly.previous;
-
-        console.log(dc);
         for (i=1; i <= 3; i++){
           if (i == 1){
             classe[i].innerHTML += `<h2 class="diario">${dc}hrs</h2>` + 
@@ -34,13 +29,9 @@ function mostraTempos(classe, indice){
           }
         }
         contador++;
-        console.log(contador);
       })
   })
 }
-
-
-
 
 mostraTempos(classWork,0);
 mostraTempos(classPlay,1);
